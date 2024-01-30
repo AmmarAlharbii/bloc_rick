@@ -5,7 +5,7 @@ class CharactersReopsitory {
   final CharacterWebServices webServices;
 
   CharactersReopsitory(this.webServices);
-  Future<List<dynamic>> getAllCharacters() async {
+  Future<List<Characters>> getAllCharacters() async {
     final characters = await webServices.getAllCharacters();
     return characters
         .map(

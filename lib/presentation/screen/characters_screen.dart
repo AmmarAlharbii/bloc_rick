@@ -10,7 +10,7 @@ class CharactersScreen extends StatelessWidget {
       appBar: AppBar(),
       body: Center(
         child: ElevatedButton(
-          onPressed: () {
+          onPressed:()   {
             CharacterWebServices().getAllCharacters();
           },
           child: const Text('print data'),
