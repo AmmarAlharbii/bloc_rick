@@ -5,11 +5,11 @@ class CharactersReopsitory {
   final CharacterWebServices webServices;
 
   CharactersReopsitory(this.webServices);
-  Future<List<Characters>> getAllCharacters() async {
+  Future<List<Character>> getAllCharacters() async {
     final characters = await webServices.getAllCharacters();
     return characters
         .map(
-          (character) => Characters.fromJson(
+          (character) => Character.fromJson(
               character), //to store every character into model and insert it into list
         )
         .toList();
