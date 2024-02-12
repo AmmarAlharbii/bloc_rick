@@ -17,7 +17,7 @@ class CharacterItem extends StatelessWidget {
       ),
       child: GridTile(
         footer: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+          padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
           width: double.infinity,
           color: Colors.black54,
           alignment: Alignment.center,
