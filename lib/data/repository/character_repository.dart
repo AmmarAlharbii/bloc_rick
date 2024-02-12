@@ -7,6 +7,7 @@ class CharactersReopsitory {
   CharactersReopsitory(this.webServices);
   Future<List<Character>> getAllCharacters() async {
     final characters = await webServices.getAllCharacters();
+    //print(characters.length);
     return characters
         .map(
           (character) => Character.fromJson(

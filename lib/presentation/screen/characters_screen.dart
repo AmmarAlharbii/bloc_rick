@@ -24,18 +24,30 @@ class _CharactersScreenState extends State<CharactersScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColor.grey,
       appBar: AppBar(
         backgroundColor: AppColor.yellow,
-        title: const Text('Characters'),
+        title: const Text(
+          'Characters',
+          style: TextStyle(
+            color: AppColor.white,
+            fontWeight: FontWeight.w800,
+            shadows: [
+              BoxShadow(blurRadius: 5),
+            ],
+          ),
+        ),
       ),
-      body: BlocBuilder(
+      body: BlocBuilder<CharactersCubit, CharactersState>(
         builder: (context, state) {
           if (state is CharactersLoaded) {
             allCharacters = (state).characters;
             return CharacterList(charactersList: allCharacters);
           } else {
-            return const CircularProgressIndicator(
-              color: AppColor.yellow,
+            return const Center(
+              child: CircularProgressIndicator(
+                color: AppColor.yellow,
+              ),
             );
           }
         },

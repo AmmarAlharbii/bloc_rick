@@ -9,11 +9,19 @@ class CharacterList extends StatelessWidget {
   final List<Character> charactersList;
   @override
   Widget build(BuildContext context) {
+    // print(charactersList.length);
     return SingleChildScrollView(
       child: Container(
         color: AppColor.grey,
         child: Column(
           children: [
+            if (charactersList.isEmpty)
+              const Center(
+                child: Text(
+                  "empty",
+                  style: TextStyle(color: AppColor.white),
+                ),
+              ),
             GridView.builder(
               itemCount: charactersList.length,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -25,9 +33,7 @@ class CharacterList extends StatelessWidget {
               padding: EdgeInsets.zero,
               physics: const ClampingScrollPhysics(),
               itemBuilder: (context, index) {
-                return CharacterItem(
-                  character: charactersList[index],
-                );
+                return CharacterItem(character: charactersList[index]);
               },
             )
           ],

@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:bloc_rick/constant/end_points.dart';
 import 'package:bloc_rick/constant/strings.dart';
 import 'package:dio/dio.dart';
@@ -20,8 +22,7 @@ class CharacterWebServices {
   Future<List<dynamic>> getAllCharacters() async {
     try {
       final response = await dio.get(EndPoints.characters);
-      print(response.data['results'].toString());
-      return response.data;
+      return response.data['results'];
     } catch (e) {
       print(e.toString());
       return [];
