@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import 'package:bloc_rick/constant/end_points.dart';
 import 'package:bloc_rick/constant/strings.dart';
 import 'package:dio/dio.dart';
