@@ -31,7 +31,6 @@ class _CharactersScreenState extends State<CharactersScreen> {
           'Characters',
           style: TextStyle(
             color: AppColor.white,
-            fontWeight: FontWeight.w800,
             shadows: [
               BoxShadow(blurRadius: 5),
             ],
